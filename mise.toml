@@ -1,0 +1,18 @@
+[settings]
+experimental = true
+
+[tasks.get-version]
+description = "Print the current package version"
+run = "echo TODO: Implement get-version task"
+
+[tasks.pin-actions]
+description = "Pin GitHub Actions to SHA commit hashes"
+run = "mise exec pinact -- pinact run -u"
+
+[tasks.audit-actions]
+description = "Audit GitHub Actions for security issues"
+run = "mise exec zizmor -- zizmor .github/workflows"
+
+[tools]
+cargo-binstall = "1.20.1"
+"cargo:knope" = "0.23.0"
